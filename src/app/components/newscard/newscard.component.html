@@ -1,0 +1,12 @@
+<section>
+    <!-- <div class="news-card" [routerLink]="['/news-article',123]"> -->
+    <div class="news-card" (click)="goToExternalPage(data.url)">
+        <div class=" card-header">
+            <img [src]="data.urlToImage ?  data.urlToImage : 'https://www.pscpower.com/wp-content/plugins/blog-designer-pro/images/related_post_no_available_image.png'"
+                alt="">
+        </div>
+        <div class="card-body">
+            <h4>{{data.title.slice(0,65)}} {{ data.title.length>65? '...' : '' }}</h4>
+        </div>
+    </div>
+</section>

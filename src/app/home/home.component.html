@@ -1,0 +1,41 @@
+<!-- Utilities -->
+<section>
+    <div class="container">
+        <div class="utilities">
+            <div class="wrapper">
+                <div class="left">
+                    <!-- Country Selection -->
+                    <select [(ngModel)]="selectedCountry" name="valueCheck" (change)="getNews()">
+                        <option [ngValue]="undefined" disabled>Select Country </option>
+                        <option *ngFor="let country of countries" [ngValue]="country.val"
+                            [selected]="country.val == selectedCountry" class="options">
+                            {{country.name}}
+                        </option>
+                    </select>
+                    <!-- Country Selection -->
+                </div>
+                <div class="right">
+                    <!-- Date Selection -->
+                    <input type="date" placeholder="from Date" [(ngModel)]="fromDate" [max]="Today">
+                    <span>-</span>
+                    <input type="date" placeholder="from Date" [(ngModel)]="toDate" [min]="fromDate" [max]="Today">
+                    <button (click)="getNewsByDate()" [disabled]="!fromDate || !toDate">Go</button>
+                    <!-- Date Selection -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Utilities -->
+
+<!-- News Display -->
+<section class="news">
+    <div class="container">
+        <div class="cards">
+            <ng-container *ngFor="let i of newsItems">
+                <app-newscard [data]="i"></app-newscard>
+            </ng-container>
+        </div>
+    </div>
+</section>
+<!-- News Display -->

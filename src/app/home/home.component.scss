@@ -1,0 +1,62 @@
+@import '../../variables.scss';
+
+section{
+    background: $secondary;
+    color: black;
+}
+
+section{
+    .utilities{
+        padding: 1rem 0;
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .left{
+                select{
+                    padding: 0.25rem 1rem;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    outline: none;
+                    option:hover{
+                        outline: none;
+                        border: 5px solid red;
+                    }
+                }
+            }
+            .right{
+                input{
+                    padding: 0.25rem 1rem;
+                    margin: 0 0.25rem;
+                }
+                button{
+                    padding: 0.35rem 1rem;
+                    outline: none;
+                    cursor: pointer;
+                    background: black;
+                    color: $secondary;
+                    transition: all .3s ease;
+                    -webkit-transition: all .3s ease;
+                    -moz-transition: all .3s ease;
+                    -ms-transition: all .3s ease;
+                    -o-transition: all .3s ease;
+                }
+                button:disabled{
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}
+
+
+
+section.news{
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 0.8rem;
+        grid-row-gap: 0.5rem;
+    }
+    padding-bottom: 3rem;
+}
