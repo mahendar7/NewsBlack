@@ -2,10 +2,10 @@
 
 ## A Dynamic News App using News API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
-
 ![alt text](http://www.mediafire.com/convkey/7334/mphe9v1ff3ln3hjzg.jpg?size_id=a)
 
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
 
 ## Development server
 
